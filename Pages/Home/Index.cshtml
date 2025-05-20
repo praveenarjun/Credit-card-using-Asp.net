@@ -1,0 +1,81 @@
+﻿@page
+@model razorproject.Pages.Home.IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<link href="~/css/tailwind.css" rel="stylesheet" />
+
+<!-- Hero Section -->
+<section class="bg-gray-100 py-12">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-4">Find the Best Credit Card for You</h2>
+        <p class="text-lg mb-8">Compare credit cards from all major banks and find the one that suits your needs.</p>
+        <a href="/Auth/SignIn"
+            class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">Get
+            Started</a>
+    </div>
+</section>
+
+<!-- Content Section -->
+<section class="container mx-auto py-12">
+    <div class="swiper-wrapper flex flex-row flex-wrap">
+        <div class="swiper-wrapper">
+            <!-- Card 1 -->
+            <div class="swiper-slide bg-white shadow-md rounded-lg p-6 w-80 h-auto flex flex-col">
+                <div class="w-full h-48 mb-4 overflow-hidden rounded-lg">
+                    <img src="~/images/infiniteCard.jpg" alt="Card 1" class="w-full h-full ">
+                </div>
+                <h3 class="text-xl font-bold mb-4">Standard Chartered Priority Banking Visa Infinite</h3>
+                <p class="mb-4 flex-grow">Standard Chartered Priority Banking Visa Infinite is a premium travel credit
+                    card with benefits that reward your total banking relationship.</p>
+                <a href="/Login/Login" class="text-blue-600 hover:underline mt-auto">Wanna Apply</a>
+            </div>
+            <!-- Card 2 -->
+            <div class="swiper-slide bg-white shadow-md rounded-lg p-6 w-80 h-auto flex flex-col">
+                <div class="w-full h-48 mb-4 overflow-hidden rounded-lg">
+                    <img src="~/images/JourneyCard.jpg" alt="Card 2" class="w-full h-full ">
+                </div>
+                <h3 class="text-xl font-bold mb-4">Standard Chartered Journey Credit Card</h3>
+                <p class="mb-4 flex-grow">Enjoy great travel privileges and a faster way to earn air miles, unlimited
+                    access to airport lounges, and more.</p>
+                <a href="/Login/Login" class="text-blue-600 hover:underline mt-auto">Wanna Apply</a>
+            </div>
+            <!-- Card 3 -->
+            <div class="swiper-slide bg-white shadow-md rounded-lg p-6 w-80 h-auto flex flex-col">
+                <div class="w-full h-48 mb-4 overflow-hidden rounded-lg">
+                    <img src="~/images/PlatinumMastercard.jpg" alt="Card 3" class="w-full h-full ">
+                </div>
+                <h3 class="text-xl font-bold mb-4">Standard Chartered Platinum MasterCard Basic</h3>
+                <p class="mb-4 flex-grow">A credit card for beginners that waives the annual fees for life and gives
+                    reward points for every Ringgit spent. To manage your finance right, you need to begin right.</p>
+                <a href="/Login/Login" class="text-blue-600 hover:underline mt-auto">Wanna Apply</a>
+            </div>
+            <!-- Card 4 -->
+            <div class="swiper-slide bg-white shadow-md rounded-lg p-6 w-80 h-auto flex flex-col">
+                <div class="w-full h-48 mb-4 overflow-hidden rounded-lg">
+                    <img src="~/images/StandardCharacted.jpg" alt="Card 4" class="w-full h-full ">
+                </div>
+                <h3 class="text-xl font-bold mb-4">Standard Chartered Simply Cash Credit Card</h3>
+                <p class="mb-4 flex-grow">Shop for your grocery plus dining, petrol fueling or reload your favourite
+                    e-wallets to enjoy up to 15% cashback every month! No annual fee for the first year.</p>
+                <a href="/Login/Login" class="text-blue-600 hover:underline mt-auto">Wanna Apply</a>
+            </div>
+            <!-- Card 5 -->
+            <div class="swiper-slide bg-white shadow-md rounded-lg p-6 w-80 h-auto flex flex-col">
+                <div class="w-full h-48 mb-4 overflow-hidden rounded-lg">
+                    <img src="~/images/VisaPlatinum.jpg" alt="Card 5" class="w-full h-full">
+                </div>
+                <h3 class="text-xl font-bold mb-4">Standard Chartered Visa Platinum</h3>
+                <p class="mb-4 flex-grow">Enjoy exclusive privileges and rewards with the Standard Chartered Visa
+                    Platinum credit card.</p>
+                <a href="/Login/Login" class="text-blue-600 hover:underline mt-auto">Wanna Apply</a>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>

@@ -1,0 +1,144 @@
+@page
+@model razorproject.Pages.ApplyCard.ApplyModel
+@{
+    ViewData["Title"] = "Apply for a Credit Card";
+}
+
+<h1>Apply for a Credit Card</h1>
+
+<form method="post" enctype="multipart/form-data" class="apply-form">
+    <div class="form-group">
+        <label asp-for="ApplyCardViewModel.FullName" class="control-label"></label>
+        <input asp-for="ApplyCardViewModel.FullName" class="form-control" autocomplete="additional-name" />
+        <span asp-validation-for="ApplyCardViewModel.FullName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ApplyCardViewModel.Address" class="control-label"></label>
+        <input asp-for="ApplyCardViewModel.Address" class="form-control" autocomplete="additional-level1" />
+        <span asp-validation-for="ApplyCardViewModel.Address" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ApplyCardViewModel.DateOfBirth" class="control-label"></label>
+        <input asp-for="ApplyCardViewModel.DateOfBirth" class="form-control" autocomplete="address-level2" />
+        <span asp-validation-for="ApplyCardViewModel.DateOfBirth" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ApplyCardViewModel.Gender" class="control-label"></label>
+        <input asp-for="ApplyCardViewModel.Gender" class="form-control" autocomplete="address-level3" />
+        <span asp-validation-for="ApplyCardViewModel.Gender" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ApplyCardViewModel.MaritalStatus" class="control-label"></label>
+        <input asp-for="ApplyCardViewModel.MaritalStatus" class="form-control" autocomplete="address-level4" />
+        <span asp-validation-for="ApplyCardViewModel.MaritalStatus" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ApplyCardViewModel.PhoneNumber" class="control-label"></label>
+        <input asp-for="ApplyCardViewModel.PhoneNumber" class="form-control" autocomplete="address-line1"/>
+        <span asp-validation-for="ApplyCardViewModel.PhoneNumber" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ApplyCardViewModel.Email" class="control-label"></label>
+        <input asp-for="ApplyCardViewModel.Email" class="form-control" autocomplete="address-line2"/>
+        <span asp-validation-for="ApplyCardViewModel.Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ApplyCardViewModel.CompanyName" class="control-label"></label>
+        <input asp-for="ApplyCardViewModel.CompanyName" class="form-control" autocomplete="bday"/>
+        <span asp-validation-for="ApplyCardViewModel.CompanyName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ApplyCardViewModel.Position" class="control-label"></label>
+        <input asp-for="ApplyCardViewModel.Position" class="form-control" autocomplete="bday-day"/>
+        <span asp-validation-for="ApplyCardViewModel.Position" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ApplyCardViewModel.MonthlyIncome" class="control-label"></label>
+        <input asp-for="ApplyCardViewModel.MonthlyIncome" class="form-control" autocomplete="bday-month" />
+        <span asp-validation-for="ApplyCardViewModel.MonthlyIncome" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ApplyCardViewModel.BankAccountNumber" class="control-label"></label>
+        <input asp-for="ApplyCardViewModel.BankAccountNumber" class="form-control" autocomplete="bday-month"/>
+        <span asp-validation-for="ApplyCardViewModel.BankAccountNumber" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ApplyCardViewModel.PassportOrBankAccount" class="control-label"></label>
+        <input asp-for="ApplyCardViewModel.PassportOrBankAccount" type="file" class="form-control" />
+        <span asp-validation-for="ApplyCardViewModel.PassportOrBankAccount" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ApplyCardViewModel.IncomeCertificate" class="control-label"></label>
+        <input asp-for="ApplyCardViewModel.IncomeCertificate" type="file" class="form-control" />
+        <span asp-validation-for="ApplyCardViewModel.IncomeCertificate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ApplyCardViewModel.Photo" class="control-label"></label>
+        <input asp-for="ApplyCardViewModel.Photo" type="file" class="form-control" />
+        <span asp-validation-for="ApplyCardViewModel.Photo" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ApplyCardViewModel.MalaysianCitizenshipIdCard" class="control-label"></label>
+        <input asp-for="ApplyCardViewModel.MalaysianCitizenshipIdCard" type="file" class="form-control" />
+        <span asp-validation-for="ApplyCardViewModel.MalaysianCitizenshipIdCard" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Submit" class="btn btn-primary" />
+    </div>
+</form>
+
+@section Styles {
+    <style>
+        .apply-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group span.text-danger {
+            display: block;
+            margin-top: 5px;
+            color: #d9534f;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+    </style>
+}
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

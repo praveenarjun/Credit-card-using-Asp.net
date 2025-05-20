@@ -1,0 +1,31 @@
+@page
+@model razorproject.Pages.Profile.ProfileModel
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<link href="~/css/tailwind.css" rel="stylesheet" />
+
+<div class="container mx-auto py-12">
+    <div class="bg-white shadow-md rounded-lg p-6 max-w-lg mx-auto text-center">
+        <h1 class="text-3xl font-bold mb-4">Your Credit Card</h1>
+        @if (Model.CardDetails != null)
+        {
+            <div class="bg-blue-600 text-white rounded-lg p-6 mb-4">
+                <div class="text-left">
+                    <h2 class="text-2xl font-bold mb-2">Credit Card</h2>
+                    <p class="text-lg mb-2">Card Number: @Model.CardDetails.CardNumber</p>
+                    <p class="text-lg mb-2">CVV: @Model.CardDetails.CVV</p>
+                    <p class="text-lg">Expiry Date: @Model.CardDetails.ExpiryDate.ToString("MM/yy")</p>
+                    <p class="text-lg">Name: @Model.CardDetails.FullName</p>
+                </div>
+            </div>
+        }
+        else
+        {
+            <p class="text-lg">No card details found.</p>
+        }
+        <a href="/" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">Go to
+            Home</a>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+@page "{id:int}"
+@model razorproject.Pages.ApplyCard.ConfirmationModel
+@{
+    ViewData["Title"] = "Confirmation";
+}
+
+<link href="~/css/tailwind.css" rel="stylesheet" />
+
+<div class="container mx-auto py-12">
+    <div class="bg-white shadow-md rounded-lg p-6 max-w-lg mx-auto text-center">
+        <h1 class="text-3xl font-bold mb-4">Confirmation</h1>
+        <p class="text-lg mb-4">
+            @Model.ApplyCardViewModel.FullName, you have successfully created your new credit card.
+        </p>
+        <a href="/Home/Index"
+            class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">Go to
+            Home</a>
+    </div>
+</div>
